@@ -15,7 +15,12 @@ def is_prime(number):
 
 
 def run():
-    """Check an initial prime-number example."""
-    number = 29
-    result = "prime" if is_prime(number) else "not prime"
-    return f"{number} is {result}."
+    """Check one prime example and one non-prime example."""
+    examples = (29, 30)
+    results = []
+
+    for number in examples:
+        result = "prime" if is_prime(number) else "not prime"
+        results.append(f"{number} is {result}")
+
+    return "; ".join(results) + "."
